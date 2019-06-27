@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json.schemastore.org/proxies",
+    "proxies": {
+        "testproxy": {
+            "matchCondition": {
+                "route": "alternative/{data}",
+                "methods": [
+                    "GET",
+                    "POST"
+                ]
+            },
+            "backendUri": "http://proxybugdemo.azurewebsites.net/api/test/{data}"
+        }
+    }
+}
